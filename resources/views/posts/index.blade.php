@@ -7,7 +7,7 @@
     </div>
 
     @if ($posts->count())
-        <ul class="list-group">
+        <ul class="list-group mb-3">
             @foreach ($posts as $post)
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <div>
@@ -24,6 +24,10 @@
                 </li>
             @endforeach
         </ul>
+        </br>
+        
+            {{ $posts->links() }} 
+    
     @else
         <p>No posts found.</p>
     @endif
